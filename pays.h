@@ -2,25 +2,30 @@
 #define PAYS_H
 
 #include <QString>
+#include <QSqlQueryModel>
 class pays
 {
 public:
     pays();
-    pays(int,QString,QString,QString);
+    pays(int,QString,QString,int);
     QString getIP_adresse();
     QString getNom();
-    QString getcontinent();
+    int getNB_athletes();
     int getclassement();
     void setIP_adresse(QString);
     void setNom(QString);
-    void setcontinent(QString);
+    void setNB_athletes(int);
     void setclassement(int);
     bool ajouter();
+   QSqlQueryModel* afficher();
+   bool supprimer(QString);
+   bool modifier(QString);
+
 
  private:
  QString IP_adresse;
  QString Nom;
- QString continent;
+ int NB_athletes;
  int classement;
 };
 

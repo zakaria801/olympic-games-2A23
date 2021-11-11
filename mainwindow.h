@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "pays.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +19,13 @@ public:
 private slots:
     void on_pb_ajouter_clicked();
 
+    void on_pb_supprimer_clicked();
+
+    void on_pb_modifier_clicked();
+
 private:
     Ui::MainWindow *ui;
+    pays p;
 };
 
 #endif // MAINWINDOW_H
