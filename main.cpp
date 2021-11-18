@@ -1,4 +1,5 @@
   #include "mainwindow.h"
+#include "login.h"
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
@@ -8,7 +9,7 @@ int main(int argc, char *argv[])
 
     Connection c;
     bool test=c.createconnect();
-      MainWindow w;
+      Login w;
     if(test)
     {w.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),

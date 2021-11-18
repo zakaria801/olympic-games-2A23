@@ -25,17 +25,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    admin.cpp \
+    historique.cpp \
+    history.cpp \
+    login.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     pays.cpp
 
 HEADERS += \
+    admin.h \
+    historique.h \
+    history.h \
+    login.h \
         mainwindow.h \
     connection.h \
     pays.h
 
 FORMS += \
+        historique.ui \
+        login.ui \
         mainwindow.ui
 
 # Default rules for deployment.

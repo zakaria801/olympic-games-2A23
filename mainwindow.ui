@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>932</width>
-    <height>584</height>
+    <width>1030</width>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
      <string notr="true">background-image: url(:/IMG/image/126899884_1814232468724026_7524869894770073441_n.png);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="widget">
      <attribute name="title">
@@ -177,9 +177,148 @@
        <rect>
         <x>105</x>
         <y>61</y>
-        <width>771</width>
-        <height>391</height>
+        <width>741</width>
+        <height>271</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rech">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>350</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="le_tri">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>340</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>trier</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_trie">
+      <property name="geometry">
+       <rect>
+        <x>552</x>
+        <y>340</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>CHOISIR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT DECROISSANT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_rech">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>350</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>CHOISIR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="le_rech">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>390</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>450</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>pdf</string>
       </property>
      </widget>
     </widget>
@@ -367,7 +506,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>932</width>
+     <width>1030</width>
      <height>26</height>
     </rect>
    </property>
