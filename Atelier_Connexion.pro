@@ -27,6 +27,7 @@ CONFIG += c++11
 SOURCES += \
     admin.cpp \
     historique.cpp \
+    historique1.cpp \
     history.cpp \
     login.cpp \
         main.cpp \
@@ -37,6 +38,7 @@ SOURCES += \
 HEADERS += \
     admin.h \
     historique.h \
+    historique1.h \
     history.h \
     login.h \
         mainwindow.h \

@@ -4,7 +4,6 @@
 #include "history.h"
 #include <QMainWindow>
 #include "pays.h"
-
 namespace Ui {
 class MainWindow;
 }
@@ -32,12 +31,14 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_clicked();
-    void on_puhButton_pdf_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
     pays p;
-    Historique *H;
+    //Historique *H;
+  historique1 histo;
 
 };
 

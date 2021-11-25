@@ -11,7 +11,10 @@
 #include <QPainter>
 #include <QFileDialog>
 #include <QDesktopServices>
-#include <QSqlQuery>
+#include<QSqlQuery>
+
+
+
 
 
 
@@ -43,6 +46,12 @@ void MainWindow::on_pb_ajouter_clicked()
    if(test)
    {
        ui->tab_pays->setModel(p.afficher());
+
+       histo.save("num_cin:"+ui->le_classement->text(),"classement :"+ui->le_Nom->text(),"Nom :"+ui->le_NB_athletes->text(),"NB_athlete :"+ui->le_IP->text());
+
+
+
+
        QMessageBox::information(nullptr,QObject::tr("ok"),QObject::tr("click cancel to exit"),QMessageBox::Cancel);
    }else
    {
@@ -141,69 +150,92 @@ void MainWindow::on_cb_trie_activated(const QString &arg1)
         ui->tab_pays->setModel(p.afficher_choix(choix));
 }
 
-void MainWindow::on_pushButton_5_clicked()
+/*void MainWindow::on_pushButton_5_clicked()
 {
 close();
 H = new Historique(this);
 H->show();
-}
-
-
-
-
-
-
+}*/
 
 void MainWindow::on_pushButton_clicked()
 {
-  QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
-                                                   "/home",
-                                                   QFileDialog::ShowDirsOnly
-                                                   | QFileDialog::DontResolveSymlinks);
-       qDebug()<<dir;
-       QPdfWriter pdf(dir+"/Pdfpays.pdf");                                 QPainter painter(&pdf);
-                                int i = 4000;
-                                     painter.setPen(Qt::red);
-
-                                     painter.setFont(QFont("Arial", 30));
-                                     painter.drawText(2100,1200,"Liste Des pays");
-                                     painter.setPen(Qt::black);
-                                     painter.setFont(QFont("Arial", 50));
-                                     painter.drawRect(1000,200,6500,2000);
-                                     painter.drawPixmap(QRect(7600,70,2000,2600),QPixmap(":/homme.jpg"));
-                                     painter.drawRect(0,3000,9600,500);
-                                     painter.setFont(QFont("Arial", 9));
-                                     painter.setPen(Qt::blue);
-                                     painter.drawText(2300,3300,"IP-adresse");
-                                     painter.drawText(4300,3300,"Nom");
-                                     painter.drawText(6300,3300,"classement");
-                                     painter.drawText(8300,3300,"NB_athlete");
-
-
-                                     QSqlQuery query;
-                                     query.prepare("select * from pays");
-                                     query.exec();
-                                     while (query.next())
-                                     {
-                                         painter.drawText(300,i,query.value(0).toString());
-                                         painter.drawText(2300,i,query.value(1).toString());
-                                         painter.drawText(4300,i,query.value(2).toString());
-                                         painter.drawText(6300,i,query.value(3).toString());
 
 
 
-                                        i = i +500;
-                                     }
-                                     int reponse = QMessageBox::question(this, "Génerer PDF", "<PDF Enregistré>...Vous Voulez Affichez Le PDF ?",
-                                                                         QMessageBox::Yes |  QMessageBox::No);
-                                         if (reponse == QMessageBox::Yes)
+
+    {
+      QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                                                       "/home",
+                                                       QFileDialog::ShowDirsOnly
+                                                       | QFileDialog::DontResolveSymlinks);
+           qDebug()<<dir;
+           QPdfWriter pdf(dir+"/PdfVoiture.pdf");                                 QPainter painter(&pdf);
+                                    int i = 4000;
+                                         painter.setPen(Qt::red);
+
+                                         painter.setFont(QFont("Arial", 30));
+                                         painter.drawText(2100,1200,"Liste Des pays");
+                                         painter.setPen(Qt::black);
+                                         painter.setFont(QFont("Arial", 50));
+                                         painter.drawRect(1000,200,6500,2000);
+                                         painter.drawPixmap(QRect(7600,70,2000,2600),QPixmap(":/homme.jpg"));
+                                         painter.drawRect(0,3000,9600,500);
+                                         painter.setFont(QFont("Arial", 9));
+                                         painter.setPen(Qt::blue);
+
+                                         painter.drawText(2300,3300,"Nom");
+                                         painter.drawText(4300,3300,"IP_adresse");
+                                         painter.drawText(6300,3300,"NB_athlete");
+                                         painter.drawText(8300,3300,"classement");
+
+
+                                         QSqlQuery query;
+                                         query.prepare("select * from pays");
+                                         query.exec();
+                                         while (query.next())
                                          {
-                                             QDesktopServices::openUrl(QUrl::fromLocalFile(dir+"/PdfVoiture.pdf"));
+                                             painter.drawText(300,i,query.value(0).toString());
+                                             painter.drawText(2300,i,query.value(1).toString());
+                                             painter.drawText(4300,i,query.value(2).toString());
+                                             painter.drawText(6300,i,query.value(3).toString());
 
-                                             painter.end();
+
+
+                                            i = i +500;
                                          }
-                                         else
-                                         {
-                                              painter.end();
-                                         }
+                                         int reponse = QMessageBox::question(this, "Génerer PDF", "<PDF Enregistré>...Vous Voulez Affichez Le PDF ?",
+                                                                             QMessageBox::Yes |  QMessageBox::No);
+                                             if (reponse == QMessageBox::Yes)
+                                             {
+                                                 QDesktopServices::openUrl(QUrl::fromLocalFile(dir+"/Pdfpays.pdf"));
+
+                                                 painter.end();
+                                             }
+                                             else
+                                             {
+                                                  painter.end();
+                                             }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    {
+        QFile file ("C:/Users/ZAKARIA/Desktop/hi.txt");
+        if (!file.open(QIODevice::ReadOnly))
+            QMessageBox::information(0,"info",file.errorString());
+        QTextStream in (&file);
+        ui->textBrowser->setText(in.readAll());
+    }
 }

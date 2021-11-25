@@ -22,15 +22,15 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>941</width>
-      <height>551</height>
+      <width>1021</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/IMG/image/126899884_1814232468724026_7524869894770073441_n.png);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="widget">
      <attribute name="title">
@@ -311,8 +311,8 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>450</y>
+        <x>410</x>
+        <y>460</y>
         <width>93</width>
         <height>28</height>
        </rect>
@@ -497,6 +497,34 @@
         </rect>
        </property>
       </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>historique</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>historique1</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>521</width>
+        <height>411</height>
+       </rect>
+      </property>
      </widget>
     </widget>
    </widget>

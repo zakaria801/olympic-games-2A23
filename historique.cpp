@@ -1,4 +1,4 @@
-#include "historique.h"
+/*#include "historique.h"
 #include "ui_historique.h"
 
 
@@ -39,3 +39,4 @@ void Historique::on_cb_trie_his_activated(const QString &arg1)
     QString choix=ui->cb_trie_his->currentText();
     ui->tab_his->setModel(H.afficher_choix(choix));
 }
+*/

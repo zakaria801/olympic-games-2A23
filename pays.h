@@ -3,6 +3,7 @@
 
 #include <QString>
 #include <QSqlQueryModel>
+#include "historique1.h"
 class pays
 {
 public:

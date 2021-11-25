@@ -1,4 +1,4 @@
-#include "history.h"
+/*#include "history.h"
 
 history::history()
 {
@@ -70,5 +70,5 @@ QSqlQueryModel *history:: afficher_choix(QString choix)
 
 }
 
-
+*/
 

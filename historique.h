@@ -1,4 +1,4 @@
-#ifndef HISTORIQUE_H
+/*#ifndef HISTORIQUE_H
 #define HISTORIQUE_H
 #include "history.h"
 #include <QMainWindow>
@@ -33,3 +33,4 @@ private:
 };
 
 #endif // HISTORIQUE_H
+*/
