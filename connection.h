@@ -6,7 +6,8 @@
 
 class Connection
 {
-public:  Connection();
+public:
+    Connection();
     bool createconnect();
 };
 
