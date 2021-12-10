@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT       += core gui sql serialport
+
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,17 +27,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    admin.cpp \
+    arduino.cpp \
+    historique.cpp \
+    historique1.cpp \
+    history.cpp \
+    login.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     pays.cpp
 
 HEADERS += \
+    admin.h \
+    arduino.h \
+    historique.h \
+    historique1.h \
+    history.h \
+    login.h \
         mainwindow.h \
     connection.h \
     pays.h
 
 FORMS += \
+        historique.ui \
+        login.ui \
         mainwindow.ui
 
 # Default rules for deployment.

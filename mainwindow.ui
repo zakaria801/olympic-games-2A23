@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>932</width>
-    <height>584</height>
+    <width>1030</width>
+    <height>721</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,15 +22,15 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>941</width>
-      <height>551</height>
+      <width>1021</width>
+      <height>661</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-image: url(:/IMG/image/126899884_1814232468724026_7524869894770073441_n.png);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="widget">
      <attribute name="title">
@@ -51,7 +51,7 @@
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>100</x>
          <y>50</y>
          <width>71</width>
          <height>16</height>
@@ -64,10 +64,10 @@
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>90</x>
          <y>90</y>
          <width>81</width>
-         <height>16</height>
+         <height>21</height>
         </rect>
        </property>
        <property name="text">
@@ -77,8 +77,8 @@
       <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>140</y>
+         <x>90</x>
+         <y>130</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -133,8 +133,8 @@
       <widget class="QLabel" name="label_9">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>190</y>
+         <x>100</x>
+         <y>180</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -159,27 +159,153 @@
      <attribute name="title">
       <string>afficher</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>760</x>
-        <y>470</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>historique</string>
-      </property>
-     </widget>
      <widget class="QTableView" name="tab_pays">
       <property name="geometry">
        <rect>
         <x>105</x>
         <y>61</y>
-        <width>771</width>
-        <height>391</height>
+        <width>741</width>
+        <height>271</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rech">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>350</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>rechercher</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="le_tri">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>340</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>trier</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_trie">
+      <property name="geometry">
+       <rect>
+        <x>552</x>
+        <y>340</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>CHOISIR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE DECROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT CROISSANT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT DECROISSANT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_rech">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>350</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>CHOISIR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IP_ADRESSE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NOM</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>NB_ATHLETE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CLASSEMENT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="le_rech">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>390</y>
+        <width>113</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>460</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>pdf</string>
       </property>
      </widget>
     </widget>
@@ -360,6 +486,237 @@
       </widget>
      </widget>
     </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>historique</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>historique1</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>521</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>temperature</string>
+     </attribute>
+     <widget class="QLabel" name="temp_label">
+      <property name="geometry">
+       <rect>
+        <x>253</x>
+        <y>60</y>
+        <width>241</width>
+        <height>89</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:22pt; font-weight:600; color:#ff0000;&quot;&gt;Temperature&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="temp_lcdNumber">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>60</y>
+        <width>132</width>
+        <height>89</height>
+       </rect>
+      </property>
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>60</red>
+            <green>60</green>
+            <blue>60</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>76</red>
+            <green>76</green>
+            <blue>76</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>60</red>
+            <green>60</green>
+            <blue>60</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>60</red>
+            <green>60</green>
+            <blue>60</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>76</red>
+            <green>76</green>
+            <blue>76</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>60</red>
+            <green>60</green>
+            <blue>60</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Light">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>255</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Dark">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="Text">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="ButtonText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>0</red>
+            <green>0</green>
+            <blue>94</blue>
+           </color>
+          </brush>
+         </colorrole>
+         <colorrole role="PlaceholderText">
+          <brush brushstyle="NoBrush">
+           <color alpha="128">
+            <red>60</red>
+            <green>60</green>
+            <blue>60</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="digitCount">
+       <number>7</number>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -367,7 +724,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>932</width>
+     <width>1030</width>
      <height>26</height>
     </rect>
    </property>

@@ -23,7 +23,7 @@ bool pays::ajouter()
     QSqlQuery query;
     QString classement_string= QString::number(classement);
     QString NB_athletes_string= QString::number(NB_athletes);
-    query.prepare("INSERT INTO pays (NB_athléte,Nom,IP_adresse,classement) "
+    query.prepare("INSERT INTO pays (NB_athlete,Nom,IP_adresse,classement) "
                   "VALUES (:NB_athletes, :forename, :surname, :classement)");
     query.bindValue(":classement", classement_string);
     query.bindValue(":forename", Nom);
@@ -56,21 +56,107 @@ bool pays::supprimer(QString IP_adresse)
 
 }
 
-bool pays::modifier(QString IP_adresse)
+bool pays::modifier()
 {
 QSqlQuery query;
 QString classement_string= QString::number(classement);
 QString NB_athletes_string= QString::number(NB_athletes);
-query.prepare("Update Pays set IP_ADRESSE =:ip_adresse , NOM =:nom , NB_athéte =:nb_athléte,CLASSEMENT =:classement  where IP_ADRESSE =:ip_adresse");
-query.bindValue(":ip_adresse", IP_adresse);
-query.bindValue(":nom", Nom);
+query.prepare("UPDATE pays SET  Nom=:Nom , NB_athlete=:NB_athletes, classement=:classement  WHERE IP_ADRESSE=:IP_ADRESSE");
+query.bindValue(":IP_ADRESSE", IP_adresse);
+query.bindValue(":Nom", Nom);
+query.bindValue(":NB_athletes", NB_athletes_string);
 query.bindValue(":classement",classement_string);
-query.bindValue(":nb_athléte", NB_athletes_string);
-return    query.exec();
+return query.exec();
 }
 
 
+QSqlQueryModel * pays::afficher_recherche1(QString b)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+    QString classement_string= QString::number(classement);
 
+    model->setQuery("SELECT * FROM pays where classement='"+b+"' ");
+
+    return model ;
+
+}
+QSqlQueryModel * pays::afficher_recherche2(QString b)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+    QString NB_athletes_string= QString::number(NB_athletes);
+
+    model->setQuery("SELECT * FROM pays where nb_athlethe='"+b+"' ");
+
+    return model ;
+
+}
+QSqlQueryModel * pays::afficher_recherche3(QString b)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM pays where Nom='"+b+"' ");
+
+    return model ;
+
+}
+QSqlQueryModel * pays::afficher_recherche4(QString b)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+    model->setQuery("SELECT * FROM pays where IP_adresse='"+b+"' ");
+
+    return model ;
+
+}
+
+//trie multicritéres
+
+QSqlQueryModel *pays:: afficher_choix(QString choix)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+     if(choix=="IP_ADRESSE CROISSANT")
+    {
+        model->setQuery("SELECT * FROM pays  ORDER BY IP_ADRESSE ASC ;");
+    }
+    else if(choix=="IP_ADRESSE DECROISSANT")
+    {
+        model->setQuery("SELECT * FROM pays  ORDER BY IP_ADRESSE DESC ;");
+    }
+     else if(choix=="NOM CROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY NOM ASC ;");
+     }
+     else if(choix=="NOM DECROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY NOM DESC;");
+     }else if(choix=="CLASSEMENT CROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY CLASSEMENT DESC ;");
+     }
+     else if(choix=="CLASSEMENT DECROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY CLASSEMENT ASC;");
+     }
+     else if(choix=="NB_ATHLETE CROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY NB_ATHLETE DESC ;");
+     }
+     else if(choix=="NB_ATHLETE DECROISSANT")
+     {
+         model->setQuery("SELECT * FROM pays  ORDER BY NB_ATHLETE ASC;");
+     }
+    else if (choix=="choisir")
+    {
+        model->setQuery("SELECT * FROM pays ");
+    }
+
+
+    return model;
+
+
+
+}
 
 
 
