@@ -7,7 +7,7 @@ Athlete::Athlete()
     num_cin=0;nom_a=" ";prenom_a=" ";sexe=" ";type_event="";
 }
 Athlete::Athlete(int num_cin,QString nom_a ,QString prenom_a ,QString  sexe,QString type_event)
-{this->num_cin=num_cin;this->nom_a=nom_a;this->prenom_a=prenom_a;this->sexe=sexe;this->type_event=type_event;}
+    {this->num_cin=num_cin;this->nom_a=nom_a;this->prenom_a=prenom_a;this->sexe=sexe;this->type_event=type_event;}
 int Athlete::getnum_cin(){return num_cin;}
 QString Athlete::getnom_a(){return nom_a;}
 QString Athlete::getprenom_a (){return prenom_a;}
